@@ -21,15 +21,15 @@ const Question = ({ currentQuestionIndex,questions,onAnswer,mark}) => {
                 }else{
                     let result;
                     if (mark < -9){
-                        result="You are drowned in your work life"
+                        result="You are drowned in your work!"
                     }else if(mark < -6){
                         result = "You are really close to drowning in your work life"
                     }else if (mark < 0){
                         result = "You are spending most of your time on work"
                     }else if (mark < 3){
-                        result = "Your work-life balance is a at moderate level"
+                        result = "Your work-life balance is at a moderate level"
                     }else if (mark < 6){
-                        result = "You did great to maintain your life outside of work!"
+                        result = "You did great maintaining your life outside of work!"
                     }else if (mark < 9){
                         result = "You are doing well with your life."
                     }else{
@@ -37,7 +37,15 @@ const Question = ({ currentQuestionIndex,questions,onAnswer,mark}) => {
                     }
                     
                     return(
-                        <h1 className="text-3xl font-bold ">{result}</h1>
+                        <div className="flex flex-col items-center gap-8">
+                            <h1 className="text-3xl font-bold ">{result}</h1>
+                            <div className="text-center font-Montserrat">
+                                <p>Never forget that you work to live.</p>
+                                <p className=" text-xs leading-8 font-bold ">Not the otherwise.</p>
+                            </div>
+                            
+                        </div>
+                        
                     )
                 }
             })()}

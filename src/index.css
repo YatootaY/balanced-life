@@ -3,8 +3,16 @@
 @tailwind utilities;
 
 #baseWave{
-  height: 44vh;
+  height: 47vh;
   background-color: #38bdf8;
   opacity: 0.8;
   transition-duration: 0.2s;
+}
+
+button{
+  transition-duration: 0.2s ;
+}
+
+button:hover{
+  transform: scale(1.05);
 }

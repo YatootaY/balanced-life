@@ -11,7 +11,7 @@ function App() {
 
   const increaseMark = () => {
     updateMark((mark) => mark + 1)
-    updateWave();
+    
   }
 
   const updateWave = () => {
@@ -19,7 +19,6 @@ function App() {
     let height = mark + 11;
     height = 95 - Math.round(95/22 * height) 
     baseWave.style.height = `${height}vh`
-    console.log(`${mark} : ${height}`)
   }
 
   const clickStart = () => {
@@ -27,7 +26,6 @@ function App() {
   }
   const decreaseMark = () => {
     updateMark((mark) => mark - 1)
-    updateWave();
   }
 
   const moveToNewQuestion = () =>{
@@ -53,18 +51,22 @@ function App() {
     updateQuestions([
       ["Did you feel productive at work?",true],
       ["Did you feel anxious to go to work?",false],
-      ["Did you feel extreme feeling to leave your work at 3PM?",false],
+      ["Did you get an extreme feeling to leave your work at 3PM?",false],
       ["Did you have any trouble sleeping?",false],
       ["Did you have time to work on your personal goal?",true],
-      ["Did you hangout with your friends outside of work?",true],
+      ["Did you hang out with your friends outside of work?",true],
       ["Could you stop thinking about work in your personal time?",true],
       ["Did you have control over your work schedule?",true],
-      ["Did you make at least 3 work-unrelated conversation with your friends/family?",true],
-      ["Did you paid enough attention to your loved ones?",true],
+      ["Did you make at least 3 work-unrelated conversations with your friends/family?",true],
+      ["Did you pay enough attention to your loved ones?",true],
       ["Did you have time to cook yourself a meal and watch late night movie?",true],
     ])
     updateCurrentQuestionIndex(0)
   },[])
+
+  useEffect(()=> {
+    updateWave();
+  },[mark])
 
   return (
     <div className="App text-slate-100 flex flex-col gap-5 justify-center items-center h-full font-Comfortaa">
