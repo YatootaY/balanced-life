@@ -25,6 +25,7 @@ function App() {
   }
 
   const onAnswer = (ans) => {
+    console.log(ans)
     if (ans === true){
       increaseMark();
     }else{
@@ -41,17 +42,17 @@ function App() {
   useEffect(()=> {
     updateMark(0);
     updateQuestions([
-      "Did you feel productive at work?",
-      "Did you feel anxious to go to work?",
-      "Did you feel extreme feeling to leave your work at 3PM?",
-      "Did you get a good night sleep?",
-      "Did you have time to work on your personal goal?",
-      "Did you hangout with your friends outside of work?",
-      "Could you stop thinking about work in your personal time?",
-      "Did you have control over your work schedule?",
-      "Did you make at least 3 work-unrelated conversation with your friends/family?",
-      "Did you paid enough attention to your loved ones?",
-      "Did you have time to cook yourself a meal and watch late night movie?",
+      ["Did you feel productive at work?",true],
+      ["Did you feel anxious to go to work?",false],
+      ["Did you feel extreme feeling to leave your work at 3PM?",false],
+      ["Did you have any trouble sleeping?",false],
+      ["Did you have time to work on your personal goal?",true],
+      ["Did you hangout with your friends outside of work?",true],
+      ["Could you stop thinking about work in your personal time?",false],
+      ["Did you have control over your work schedule?",true],
+      ["Did you make at least 3 work-unrelated conversation with your friends/family?",true],
+      ["Did you paid enough attention to your loved ones?",true],
+      ["Did you have time to cook yourself a meal and watch late night movie?",true],
     ])
     updateCurrentQuestionIndex(0)
   },[])
@@ -61,14 +62,12 @@ function App() {
 
       {(()=>{
         if (start===false){
-          console.log("start")
           return(
             <Welcome clickStart={clickStart}/>
           )
         }else{
-          console.log("end")
           return(
-            <Question currentQuestionIndex={currentQuestionIndex} questions={questions} onAnswer={onAnswer}/>
+            <Question currentQuestionIndex={currentQuestionIndex} questions={questions} onAnswer={onAnswer} mark={mark}/>
           )
         }
       })()}
