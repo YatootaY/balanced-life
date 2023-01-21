@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/balanced-life/static/css/main.d0baacbd.css",
+    "main.js": "/balanced-life/static/js/main.79f174cd.js",
+    "index.html": "/balanced-life/index.html",
+    "main.d0baacbd.css.map": "/balanced-life/static/css/main.d0baacbd.css.map",
+    "main.79f174cd.js.map": "/balanced-life/static/js/main.79f174cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0baacbd.css",
+    "static/js/main.79f174cd.js"
+  ]
+}
