@@ -8,9 +8,9 @@ const Question = ({ currentQuestionIndex,questions,onAnswer,mark}) => {
             {(()=> {
                 if (currentQuestionIndex < questions.length){
                     return(
-                        <div className="flex flex-col justify-center items-center gap-5">
+                        <div className="flex flex-col justify-center items-center gap-5 mx-8">
                             <p>In the past week,</p>
-                            <h1 className="text-3xl font-bold ">{questions[currentQuestionIndex][0]}</h1>
+                            <h1 className="font-bold text-xl text-center md:text-3xl ">{questions[currentQuestionIndex][0]}</h1>
                             <div className="flex gap-5 font-bold">
                                 <button className="bg-green-700 text-white w-32 py-3 rounded-lg" onClick={() => {onAnswer(questions[currentQuestionIndex][1])}}>YES</button>
                                 <button className="bg-red-700 text-white w-32 py-3 rounded-lg" onClick={()=> {onAnswer(!questions[currentQuestionIndex][1])}}>NO</button>
@@ -37,8 +37,8 @@ const Question = ({ currentQuestionIndex,questions,onAnswer,mark}) => {
                     }
                     
                     return(
-                        <div className="flex flex-col items-center gap-8">
-                            <h1 className="text-3xl font-bold ">{result}</h1>
+                        <div className="flex flex-col items-center gap-8 mx-8">
+                            <h1 className="font-bold text-2xl text-center md:text-3xl ">{result}</h1>
                             <div className="text-center font-Montserrat">
                                 <p>Never forget that you work to live.</p>
                                 <p className=" text-xs leading-8 font-bold ">Not the otherwise.</p>
