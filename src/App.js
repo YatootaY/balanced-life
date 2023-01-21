@@ -51,7 +51,7 @@ function App() {
     updateQuestions([
       ["Did you feel productive at work?",true],
       ["Did you feel anxious to go to work?",false],
-      ["Did you get an extreme feeling to leave your work at 3PM?",false],
+      ["Did you get an extreme feeling to leave your work after 3PM?",false],
       ["Did you have any trouble sleeping?",false],
       ["Did you have time to work on your personal goal?",true],
       ["Did you hang out with your friends outside of work?",true],
