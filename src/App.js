@@ -11,6 +11,15 @@ function App() {
 
   const increaseMark = () => {
     updateMark((mark) => mark + 1)
+    updateWave();
+  }
+
+  const updateWave = () => {
+    const baseWave = document.getElementById("baseWave")
+    let height = mark + 11;
+    height = 95 - Math.round(95/22 * height) 
+    baseWave.style.height = `${height}vh`
+    console.log(`${mark} : ${height}`)
   }
 
   const clickStart = () => {
@@ -18,6 +27,7 @@ function App() {
   }
   const decreaseMark = () => {
     updateMark((mark) => mark - 1)
+    updateWave();
   }
 
   const moveToNewQuestion = () =>{
@@ -25,7 +35,6 @@ function App() {
   }
 
   const onAnswer = (ans) => {
-    console.log(ans)
     if (ans === true){
       increaseMark();
     }else{
@@ -48,7 +57,7 @@ function App() {
       ["Did you have any trouble sleeping?",false],
       ["Did you have time to work on your personal goal?",true],
       ["Did you hangout with your friends outside of work?",true],
-      ["Could you stop thinking about work in your personal time?",false],
+      ["Could you stop thinking about work in your personal time?",true],
       ["Did you have control over your work schedule?",true],
       ["Did you make at least 3 work-unrelated conversation with your friends/family?",true],
       ["Did you paid enough attention to your loved ones?",true],

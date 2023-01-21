@@ -7,7 +7,6 @@ const Question = ({ currentQuestionIndex,questions,onAnswer,mark}) => {
 
             {(()=> {
                 if (currentQuestionIndex < questions.length){
-                    console.log(mark)
                     return(
                         <div className="flex flex-col justify-center items-center gap-5">
                             <p>In the past week,</p>
