@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/balanced-life/static/css/main.d0baacbd.css",
-    "main.js": "/balanced-life/static/js/main.79f174cd.js",
+    "main.css": "/balanced-life/static/css/main.bee9bd61.css",
+    "main.js": "/balanced-life/static/js/main.02296a6f.js",
     "index.html": "/balanced-life/index.html",
-    "main.d0baacbd.css.map": "/balanced-life/static/css/main.d0baacbd.css.map",
-    "main.79f174cd.js.map": "/balanced-life/static/js/main.79f174cd.js.map"
+    "main.bee9bd61.css.map": "/balanced-life/static/css/main.bee9bd61.css.map",
+    "main.02296a6f.js.map": "/balanced-life/static/js/main.02296a6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0baacbd.css",
-    "static/js/main.79f174cd.js"
+    "static/css/main.bee9bd61.css",
+    "static/js/main.02296a6f.js"
   ]
 }
