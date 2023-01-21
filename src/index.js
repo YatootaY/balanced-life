@@ -16,7 +16,7 @@ root.render(
           amplitude:20,
           speed:0.5,
           points:3
-        }} id="wave" className='h-14'/>
+        }} id="wave" className='h-14 opacity-80'/>
       <div id="baseWave">
             
       </div>
